@@ -21,10 +21,10 @@ imbalanced binary classification problem.
 
 ## Team Details
 
-  Name                   SRN
-  ---------------------- ---------------
-  M S NIKHIL CHOWDHARY   PES2UG24CS253
-  MOHITH KUMAR BATTU     PES2UG24CS283
+| Name | SRN |
+|---|---|
+| M S NIKHIL CHOWDHARY | PES2UG24CS253 |
+| MOHITH KUMAR BATTU | PES2UG24CS283 |
 
 ## Objectives
 
@@ -49,40 +49,20 @@ including the customer ID, 12 input features, and the target column
 The `ID` column is excluded from model training because it is an
 identifier rather than a predictive feature.
 
-  -----------------------------------------------------------------------
-  Feature                             Description
-  ----------------------------------- -----------------------------------
-  Age                                 Customer's age
-
-  Experience                          Years of professional experience
-
-  Income                              Annual income
-
-  ZIP Code                            Customer's home ZIP code
-
-  Family                              Family size
-
-  CCAvg                               Average monthly credit-card
-                                      spending
-
-  Education                           Education level
-
-  Mortgage                            Value of the customer's house
-                                      mortgage, if any
-
-  Securities Account                  Whether the customer has a
-                                      securities account with the bank
-
-  CD Account                          Whether the customer has a
-                                      certificate of deposit account
-
-  Online                              Whether the customer uses the
-                                      bank's online banking facilities
-
-  CreditCard                          Whether the customer has a credit
-                                      card issued by the bank
-  -----------------------------------------------------------------------
-
+| Feature | Description |
+|---|---|
+| Age | Customer's age |
+| Experience | Years of professional experience |
+| Income | Annual income |
+| ZIP Code | Customer's home ZIP code |
+| Family | Family size |
+| CCAvg | Average monthly credit-card spending |
+| Education | Education level |
+| Mortgage | Value of the customer's house mortgage, if any |
+| Securities Account | Whether the customer has a securities account with the bank |
+| CD Account | Whether the customer has a certificate of deposit account |
+| Online | Whether the customer uses the bank's online banking facilities |
+| CreditCard | Whether the customer has a credit card issued by the bank |
 **Target:** `Personal Loan`
 
 -   `0` --- Customer did not accept the personal loan.
@@ -128,30 +108,13 @@ The notebook uses `GridSearchCV` with **5-fold cross-validation** and
 is the minority class and a model can obtain high accuracy while missing
 loan acceptances.
 
-  -----------------------------------------------------------------------
-  Algorithm                           Approach
-  ----------------------------------- -----------------------------------
-  Perceptron                          Tuned with different
-                                      regularization, learning-rate, and
-                                      iteration settings
-
-  Logistic Regression                 Tuned with different regularization
-                                      strengths, penalties, and
-                                      compatible solvers
-
-  SVM                                 Compares linear, RBF, and
-                                      polynomial kernels and their
-                                      parameters
-
-  MLP                                 Tunes hidden-layer architecture,
-                                      activation, regularization, and
-                                      learning-rate settings
-
-  K-Means                             Searches clustering parameters and
-                                      maps the cluster with the higher
-                                      loan-acceptance rate to class `1`,
-                                      based on training data
-  -----------------------------------------------------------------------
+| Algorithm | Approach |
+|---|---|
+| Perceptron | Tuned with different regularization, learning-rate, and iteration settings |
+| Logistic Regression | Tuned with different regularization strengths, penalties, and compatible solvers |
+| SVM | Compares linear, RBF, and polynomial kernels and their parameters |
+| MLP | Tunes hidden-layer architecture, activation, regularization, and learning-rate settings |
+| K-Means | Searches clustering parameters and maps the cluster with the higher loan-acceptance rate to class `1`, based on training data |
 
 **K-Means note:** K-Means is an unsupervised clustering algorithm, not a
 conventional supervised classifier. Since its cluster labels do not
@@ -182,13 +145,13 @@ comparison, and a summary of the best hyperparameters.
 The following results are from the final notebook version discussed for
 this project.
 
-  Model                     Accuracy    Precision       Recall     F1-score      ROC-AUC
-  --------------------- ------------ ------------ ------------ ------------ ------------
-  Perceptron                  0.9290       0.6238       0.6562       0.6396       0.9400
-  Logistic Regression         0.9520       0.8077       0.6562       0.7241       0.9633
-  SVM                         0.9840       0.9545       0.8750       0.9130       0.9924
-  MLP                     **0.9870**   **0.9560**   **0.9062**   **0.9305**   **0.9930**
-  K-Means                     0.8300       0.3405       0.8229       0.4817       0.8888
+| Model | Accuracy | Precision | Recall | F1-score | ROC-AUC |
+|---|---:|---:|---:|---:|---:|
+| Perceptron | 0.9290 | 0.6238 | 0.6562 | 0.6396 | 0.9400 |
+| Logistic Regression | 0.9520 | 0.8077 | 0.6562 | 0.7241 | 0.9633 |
+| SVM | 0.9840 | 0.9545 | 0.8750 | 0.9130 | 0.9924 |
+| MLP | **0.9870** | **0.9560** | **0.9062** | **0.9305** | **0.9930** |
+| K-Means | 0.8300 | 0.3405 | 0.8229 | 0.4817 | 0.8888 |
 
 ### Discussion
 
